@@ -1,0 +1,152 @@
+body {
+    margin: 90px 200px 240px 210px;
+    border-radius: 20px;
+    padding-bottom: 50px;
+    padding-right: 10px;
+    background-repeat: no-repeat;
+    background-size: 1038px 950px;
+    background-position: 160px 50px;
+    font-family: monospace;
+    max-width: 80%;
+}
+
+h1 {
+    font-size: 80px;
+    display: inline;
+}
+
+h1,
+.col.date,
+.row.temp {
+    margin-left: 80px;
+}
+
+img.emojione {
+    margin: 0px;
+    display: inline;
+    height: auto;
+    width: 50px;
+}
+
+span.emoji {
+    font-size: 60px;
+    vertical-align: middle;
+    line-height: 2;
+}
+
+h4 {
+    display: inline;
+}
+
+strong {
+    font-size: 20px;
+}
+
+.form-control {
+    padding: 10px 100px 7px 10px;
+    margin-top: 50px;
+}
+
+.btn.btn-primary.mb-3 {
+    margin-top: 50px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.btn.btn-success {
+    margin-top: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.row.forcast {
+    margin-bottom: 0;
+}
+
+.row.city {
+    margin-top: 80px;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.row.temp {
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.row.days {
+    margin: 20px 0 50px 0;
+}
+
+.card,
+.hours {
+    text-align: center;
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: aliceblue;
+}
+
+.info {
+    text-align: center;
+}
+
+h5 {
+    line-height: 0.5rem;
+}
+
+.days,
+.row.forcast {
+    color: aliceblue;
+}
+
+img.emojione {
+    margin: 0px;
+    display: inline;
+    height: auto;
+    width: 50px;
+}
+
+h5.card-emo,
+.col.emoji {
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+.fas.fa-cloud-sun {
+    font-size: 60px;
+    color: rgb(238, 238, 119);
+}
+
+.fas.fa-cloud-sun:hover {
+    font-size: 80px;
+}
+
+#c-degree {
+    display: inline;
+    text-decoration: none;
+    font-size: 35px;
+    padding: 0 0;
+    margin: 0 auto;
+}
+
+.temperatur {
+    display: inline;
+    margin: 0 auto;
+    padding-top: 0;
+}
+
+#temp {
+    display: inline;
+    font-size: 80px;
+}
+
+#city {
+    top: 50px;
+    left: 220px;
+}
+
+.col-3.humidity,
+.pressure {
+    font-weight: bold;
+}
