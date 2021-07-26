@@ -23,8 +23,8 @@ let months = [
 ];
 
 let now = new Date();
-let today = document.querySelector("#today");
-today.innerHTML = `${days[now.getDay()]}`;
+let today = document.querySelector("#day");
+day.innerHTML = `${days[now.getDay()]}`;
 let date = document.querySelector("#date");
 date.innerHTML = `${now.getDate()} ${
   months[now.getMonth()]

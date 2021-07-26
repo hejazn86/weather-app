@@ -1,16 +1,14 @@
-body {
-    margin: 90px 200px 240px 210px;
+.weather {
+    border: 2px solid purple;
     border-radius: 20px;
     padding-right: 10px;
-    background-repeat: no-repeat;
-    background-size: 1038px 950px;
-    background-position: 160px 50px;
     font-family: monospace;
-    max-width: 80%;
+    max-width: 800px;
+    margin: 40px auto;
 }
 
 h1 {
-    font-size: 70px;
+    font-size: 50px;
     display: inline;
 }
 
@@ -25,20 +23,6 @@ ul {
     list-style: none;
 }
 
-
-/* img.emojione {
-  margin: 0px;
-  display: inline;
-  height: auto;
-  width: 50px;
-}
-
-span.emoji {
-  font-size: 60px;
-  vertical-align: middle;
-  line-height: 2;
-} */
-
 h4 {
     display: inline;
 }
@@ -47,16 +31,20 @@ strong {
     font-size: 20px;
 }
 
-.form-control {
-    padding: 10px 100px 7px 10px;
-    margin-top: 50px;
+.form {
+    margin: 70px auto;
 }
 
-.btn.btn-primary.mb-3 {
+.form-control {
+    padding: 10px 70px 7px 10px;
+}
+
+
+/* .btn.btn-primary.mb-3 {
     margin-top: 50px;
     font-size: 17px;
     font-weight: bold;
-}
+} */
 
 .btn.btn-success {
     margin-top: 50px;
@@ -65,9 +53,10 @@ strong {
     padding-bottom: 10px;
 }
 
-.row.forcast {
+
+/* .row.forcast {
     margin-bottom: 0;
-}
+} */
 
 .row.city {
     margin-top: 80px;
@@ -89,7 +78,6 @@ strong {
     text-align: center;
     border: 1px solid transparent;
     background-color: transparent;
-    color: aliceblue;
 }
 
 .info {
@@ -100,10 +88,11 @@ h5 {
     line-height: 0.5rem;
 }
 
-.days,
+
+/* .days,
 .row.forcast {
     color: aliceblue;
-}
+} */
 
 img.emojione {
     margin: 0px;
@@ -146,9 +135,8 @@ h5.card-emo,
     font-size: 80px;
 }
 
-#city {
-    top: 50px;
-    left: 220px;
+.city-info {
+    margin: 20px auto;
 }
 
 .humidity,
