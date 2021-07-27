@@ -3,19 +3,8 @@
     border-radius: 20px;
     padding-right: 10px;
     font-family: monospace;
-    max-width: 800px;
+    max-width: 700px;
     margin: 40px auto;
-}
-
-h1 {
-    font-size: 50px;
-    display: inline;
-}
-
-h1,
-.col.date,
-.row.temp {
-    margin-left: 80px;
 }
 
 ul {
@@ -23,54 +12,55 @@ ul {
     list-style: none;
 }
 
-h4 {
-    display: inline;
-}
-
 strong {
     font-size: 20px;
 }
 
 .form {
-    margin: 70px auto;
+    margin: 30px auto;
+    padding: 0 50px;
 }
 
 .form-control {
     padding: 10px 70px 7px 10px;
 }
 
-
-/* .btn.btn-primary.mb-3 {
+.btn.btn-primary.mb-3 {
     margin-top: 50px;
     font-size: 17px;
     font-weight: bold;
-} */
+}
 
 .btn.btn-success {
     margin-top: 50px;
     font-size: 14px;
     font-weight: bold;
-    padding-bottom: 10px;
+    padding: 10px 10px;
 }
 
+.row.forcast {
+    font-size: 35px;
+    font-weight: 200px;
+}
 
-/* .row.forcast {
-    margin-bottom: 0;
-} */
-
-.row.city {
-    margin-top: 80px;
+.city {
     margin-bottom: 0;
     text-align: left;
+    font-size: 50px;
+    display: inline;
 }
 
-.row.temp {
+.city-info {
+    font-size: 16px;
+}
+
+.temp {
     margin: 0 auto;
     margin-top: 20px;
 }
 
-.row.days {
-    margin: 20px 0 50px 0;
+.days {
+    margin: 0 auto;
 }
 
 .card,
@@ -78,10 +68,6 @@ strong {
     text-align: center;
     border: 1px solid transparent;
     background-color: transparent;
-}
-
-.info {
-    text-align: center;
 }
 
 h5 {
@@ -94,55 +80,41 @@ h5 {
     color: aliceblue;
 } */
 
-img.emojione {
+
+/* img.emojione {
     margin: 0px;
     display: inline;
     height: auto;
     width: 50px;
+} */
+
+a {
+    text-decoration: none;
 }
 
-h5.card-emo,
+
+/* h5.card-emo,
 .col.emoji {
     font-size: 25px;
     vertical-align: middle;
+} */
+
+.units {
+    color: #202124;
+    display: inline-block;
+    line-height: 24px;
+    vertical-align: top;
+    font-size: 18px;
+    margin-top: 6px;
+    padding-left: 0;
 }
 
-.fas.fa-cloud-sun {
-    font-size: 60px;
-    color: rgb(238, 238, 119);
-}
-
-.fas.fa-cloud-sun:hover {
-    font-size: 80px;
-}
-
-#c-degree {
-    display: inline;
-    text-decoration: none;
-    font-size: 35px;
-    padding: 0 0;
-    margin: 0 auto;
-}
-
-.temperatur {
-    display: inline;
-    margin: 0 auto;
-    padding-top: 0;
-}
-
-#temp {
-    display: inline;
-    font-size: 80px;
+.col-6.temp {
+    margin: 10px auto;
 }
 
 .city-info {
-    margin: 20px auto;
-}
-
-.humidity,
-.pressure,
-.wind {
-    font-weight: bold;
+    margin: 10px auto;
 }
 
 .source-code {
@@ -150,6 +122,23 @@ h5.card-emo,
     font-weight: bold;
 }
 
-a {
-    text-decoration: none;
+.clearfix.temp {
+    display: inline;
+    padding-left: 20px;
+}
+
+.temperature strong {
+    font-size: 64px;
+    margin: 0 auto;
+    padding-right: 0;
+    line-height: 60px;
+    font-weight: 200px;
+}
+
+.icon {
+    display: inline-block;
+    vertical-align: top;
+    height: 60px;
+    margin-top: unset;
+    width: 60px;
 }

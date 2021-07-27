@@ -25,12 +25,10 @@
                     </div>
                 </form>
 
-                <div class="row info">
-                    <div class="col-6">
+                <div class="row">
+                    <div class="col-4">
+                        <h1 class="city" id="city">Ahwaz</h1>
                         <ul class="city-info">
-                            <li>
-                                <h1 id="city">Ahwaz</h1>
-                            </li>
                             <li>
                                 <div class="day" id="day">
                                     <strong> Today</strong>
@@ -40,105 +38,95 @@
                                 <div class="date" id="date">5 July 2021 06:00</div>
                             </li>
                             <li>
-                                <h4 id="description">Partially Cloudy</h4>
+                                <div id="description">Partially Cloudy</div>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="row temp info">
-                    <div class="col-5 tempo">
-                        <span class="temperature" id="temp">27</span>
-
-                        <a href="" id="c-degree">C°</a>
-                    </div>
-                    <div class="col-3">
-                        <ul>
-                            <li class="humidity">
-                                Humidity : <span id="humidity"> %56</span>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="clearfix temp">
+                            <img class="float-left icon" alt="Clear with periodic clouds" src="//ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png" id="icon" />
+                            <span class="float-left temperature" id="temp"><strong>27 </strong>
+                  <span class="units"
+                    ><a href="#" id="c-degree">C°</a>|<a href="#" id="f-degree"
+                      >F°</a
+                    ></span
+                  ></span
+                >
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li class="humidity">
+                  Humidity : <span id="humidity"> %56</span>
                             </li>
                             <li class="pressure">
                                 Pressure : <span id="pressure"> 15</span>
                             </li>
                             <li class="wind">Wind : <span id="wind"> 4</span> KM/h</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="row forcast">
-                    <hr />
-                    <h2>Forcast</h2>
-                    <hr />
-                </div>
-                <div class="hours">
-                    <div class="row hours">
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-header bg-transparent">8:00</div>
-                                <div class="card-body text-success">
-                                    <h5 class="card-emo">⛅️</h5>
-                                </div>
-                                <div class="card-footer bg-transparent">28°</div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-header bg-transparent">10:00</div>
-                                <div class="card-body text-success">
-                                    <h5 class="card-emo">🌥</h5>
-                                </div>
-                                <div class="card-footer bg-transparent">28°</div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-header bg-transparent">12:00</div>
-                                <div class="card-body text-success">
-                                    <h5 class="card-emo">☁️</h5>
-                                </div>
-                                <div class="card-footer bg-transparent">30°</div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-header bg-transparent">14:00</div>
-                                <div class="card-body text-success">
-                                    <h5 class="card-emo">☁️</h5>
-                                </div>
-                                <div class="card-footer bg-transparent">31°</div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-header bg-transparent">16:00</div>
-                                <div class="card-body text-success">
-                                    <h5 class="card-emo">⛅️</h5>
-                                </div>
-                                <div class="card-footer bg-transparent">30°</div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-header bg-transparent">18:00</div>
-                                <div class="card-body text-success">
-                                    <h5 class="card-emo">⛅️</h5>
-                                </div>
-                                <div class="card-footer bg-transparent">27°</div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-header bg-transparent">20:00</div>
-                                <div class="card-body text-success">
-                                    <h5 class="card-emo">🌝</h5>
-                                </div>
-                                <div class="card-footer bg-transparent">25°</div>
-                            </div>
+                            </ul>
                         </div>
                     </div>
-                    <hr />
-                </div>
 
-                <!-- <div class="days">
+                    <div class="row forcast">
+                        <hr />
+                        <h2>Forcast</h2>
+                        <hr />
+                    </div>
+                    <div class="hours">
+                        <div class="row hours">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-header bg-transparent">10:00</div>
+                                    <div class="card-body text-success">
+                                        <h5 class="card-emo">🌥</h5>
+                                    </div>
+                                    <div class="card-footer bg-transparent">28°</div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-header bg-transparent">13:00</div>
+                                    <div class="card-body text-success">
+                                        <h5 class="card-emo">☁️</h5>
+                                    </div>
+                                    <div class="card-footer bg-transparent">31°</div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-header bg-transparent">16:00</div>
+                                    <div class="card-body text-success">
+                                        <h5 class="card-emo">⛅️</h5>
+                                    </div>
+                                    <div class="card-footer bg-transparent">30°</div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-header bg-transparent">19:00</div>
+                                    <div class="card-body text-success">
+                                        <h5 class="card-emo">⛅️</h5>
+                                    </div>
+                                    <div class="card-footer bg-transparent">27°</div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-header bg-transparent">22:00</div>
+                                    <div class="card-body text-success">
+                                        <h5 class="card-emo">🌝</h5>
+                                    </div>
+                                    <div class="card-footer bg-transparent">25°</div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                    </div>
+
+                    <!-- <div class="days">
                     <div class="row Tue">
                         <div class="col name"><strong>Tuesday</strong></div>
                         <div class="col emoji">🌧</div>
@@ -162,10 +150,10 @@
                         <div class="col emoji">🌤</div>
                         <div class="col temp">25°</div>
                     </div> -->
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <span class="source-code"><a href="http://https://github.com/hejazn86/weather-app"
+            <div class="row">
+                <span class="source-code"><a href="http://https://github.com/hejazn86/weather-app"
             >Source Code</a
           >
           by Hejaz Nawasser</span
