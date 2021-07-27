@@ -33,26 +33,26 @@ date.innerHTML = `${now.getDate()} ${
 //cities' weather info
 function displayWeather(response) {
     let city = document.querySelector("#city");
-    city.innerHTML = response.data.name;
     let temp = document.querySelector("#temp");
-    let temperature = Math.round(response.data.main.temp);
-    temp.innerHTML = `${temperature}`;
     let humidity = document.querySelector("#humidity");
-    humidity.innerHTML = `% ${response.data.main.humidity}`;
     let pressure = document.querySelector("#pressure");
-    pressure.innerHTML = response.data.main.pressure;
     let wind = document.querySelector("#wind");
-    wind.innerHTML = response.data.wind.speed;
     let state = document.querySelector("#description");
+
+    city.innerHTML = response.data.name;
+    temp.innerHTML = `${Math.round(response.data.main.temp)}`;
+    humidity.innerHTML = `% ${response.data.main.humidity}`;
+    pressure.innerHTML = response.data.main.pressure;
+    wind.innerHTML = response.data.wind.speed;
     state.innerHTML = response.data.weather[0].main;
 }
 
 function getInformation(event) {
     event.preventDefault();
     let apiKey = "23e3d9bae4132013c667d9e2b2889760";
-    let cityName = document.querySelector("#inputCity").value;
-    cityName = cityName.charAt(0).toUpperCase() + cityName.slice(1);
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=`;
+    let cityName = document.querySelector("#inputCity").value;
+    // cityName = cityName.charAt(0).toUpperCase() + cityName.slice(1);
 
     axios
         .get(`${apiUrl}${cityName}&units=metric&appid=${apiKey}`)

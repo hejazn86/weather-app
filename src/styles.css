@@ -23,6 +23,7 @@ strong {
 
 .form-control {
     padding: 10px 70px 7px 10px;
+    text-transform: capitalize;
 }
 
 .btn.btn-primary.mb-3 {
