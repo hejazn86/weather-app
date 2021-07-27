@@ -3,7 +3,7 @@
     border-radius: 20px;
     padding-right: 10px;
     font-family: monospace;
-    max-width: 700px;
+    max-width: 800px;
     margin: 40px auto;
 }
 
@@ -52,7 +52,9 @@ strong {
 }
 
 .city-info {
+    margin: 0 auto;
     font-size: 16px;
+    text-align: left;
 }
 
 .temp {
@@ -75,30 +77,9 @@ h5 {
     line-height: 0.5rem;
 }
 
-
-/* .days,
-.row.forcast {
-    color: aliceblue;
-} */
-
-
-/* img.emojione {
-    margin: 0px;
-    display: inline;
-    height: auto;
-    width: 50px;
-} */
-
 a {
     text-decoration: none;
 }
-
-
-/* h5.card-emo,
-.col.emoji {
-    font-size: 25px;
-    vertical-align: middle;
-} */
 
 .units {
     color: #202124;
@@ -107,15 +88,14 @@ a {
     vertical-align: top;
     font-size: 18px;
     margin-top: 6px;
-    padding-left: 0;
 }
 
-.col-6.temp {
-    margin: 10px auto;
+.temp {
+    margin: 0 auto;
 }
 
 .city-info {
-    margin: 10px auto;
+    margin: 0 auto;
 }
 
 .source-code {
@@ -123,23 +103,20 @@ a {
     font-weight: bold;
 }
 
-.clearfix.temp {
+.temp {
     display: inline;
-    padding-left: 20px;
+    padding: 5px 10px;
 }
 
 .temperature strong {
     font-size: 64px;
     margin: 0 auto;
-    padding-right: 0;
     line-height: 60px;
-    font-weight: 200px;
 }
 
 .icon {
     display: inline-block;
-    vertical-align: top;
+    /* vertical-align: top; */
     height: 60px;
-    margin-top: unset;
     width: 60px;
 }
