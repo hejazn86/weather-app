@@ -118,15 +118,7 @@ a {
     padding: 5px 10px;
 }
 
-.temperature strong {
+.temperature {
     font-size: 64px;
-    margin: 0 auto;
-    line-height: 60px;
-}
-
-.icon {
-    display: inline-block;
-    /* vertical-align: top; */
-    height: 60px;
-    width: 60px;
+    line-height: 1;
 }
