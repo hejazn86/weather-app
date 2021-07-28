@@ -87,3 +87,12 @@ a {
     font-size: 64px;
     line-height: 1;
 }
+
+.units .active {
+    cursor: default;
+    color: black;
+}
+
+.units .active:hover {
+    text-decoration: none;
+}

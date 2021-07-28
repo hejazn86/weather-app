@@ -34,6 +34,7 @@ date.innerHTML = `${now.getDate()} ${
 function displayWeather(response) {
     let cityElement = document.querySelector("#city");
     let temp = document.querySelector("#temp");
+    celsiusTemp = response.data.main.temp;
     let humidity = document.querySelector("#humidity");
     let pressure = document.querySelector("#pressure");
     let wind = document.querySelector("#wind");
@@ -41,7 +42,7 @@ function displayWeather(response) {
     let icon = document.querySelector("#icon");
 
     cityElement.innerHTML = response.data.name;
-    temp.innerHTML = `${Math.round(response.data.main.temp)}`;
+    temp.innerHTML = `${Math.round(celsiusTemp)}`;
     humidity.innerHTML = `% ${response.data.main.humidity}`;
     pressure.innerHTML = response.data.main.pressure;
     wind.innerHTML = response.data.wind.speed;
@@ -65,7 +66,32 @@ function getInformation(event) {
     search(cityName.value);
 }
 
-search("Ahvaz");
+function convertToFahrenheit(event) {
+    event.preventDefault();
+    celsiusProperty.classList.remove("active");
+    fahrenheitProperty.classList.add("active");
+    let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+    let temp = document.querySelector("#temp");
+    temp.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function convertToCelsius(event) {
+    event.preventDefault();
+    fahrenheitProperty.classList.remove("active");
+    celsiusProperty.classList.add("active");
+    let temp = document.querySelector("#temp");
+    temp.innerHTML = Math.round(celsiusTemp);
+}
+
+let celsiusTemp = null;
 
 let formCity = document.querySelector("#form-city");
 formCity.addEventListener("submit", getInformation);
+
+let fahrenheitProperty = document.querySelector("#f-degree");
+fahrenheitProperty.addEventListener("click", convertToFahrenheit);
+
+let celsiusProperty = document.querySelector("#c-degree");
+celsiusProperty.addEventListener("click", convertToCelsius);
+
+search("Ahvaz");
