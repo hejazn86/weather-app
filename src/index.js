@@ -32,12 +32,14 @@ date.innerHTML = `${now.getDate()} ${
 
 //cities' weather info
 function displayWeather(response) {
+    console.log(response);
     let city = document.querySelector("#city");
     let temp = document.querySelector("#temp");
     let humidity = document.querySelector("#humidity");
     let pressure = document.querySelector("#pressure");
     let wind = document.querySelector("#wind");
     let state = document.querySelector("#description");
+    let icon = document.querySelector("#icon");
 
     city.innerHTML = response.data.name;
     temp.innerHTML = `${Math.round(response.data.main.temp)}`;
@@ -45,6 +47,11 @@ function displayWeather(response) {
     pressure.innerHTML = response.data.main.pressure;
     wind.innerHTML = response.data.wind.speed;
     state.innerHTML = response.data.weather[0].main;
+    icon.setAttribute(
+        "src",
+        `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+    icon.setAttribute("alt", `${response.data.weather[0].description}`);
 }
 
 function getInformation(event) {
