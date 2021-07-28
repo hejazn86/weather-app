@@ -1,34 +1,26 @@
 //current date
-let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Satuarday",
-];
-let months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    " August",
-    "September",
-    "October",
-    "November",
-    "December",
-];
+function returnData(timestamp) {
+    let date = new Date(timestamp);
+    let days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Satuarday",
+    ];
+    let day = days[date.getDay()];
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    if (minutes < 10) {
+        minutes = `0${minutes}`;
+    }
+    if (hours < 10) {
+        hours = `0${hours}`;
+    }
 
-let now = new Date();
-let today = document.querySelector("#day");
-day.innerHTML = `${days[now.getDay()]}`;
-let date = document.querySelector("#date");
-date.innerHTML = `${now.getDate()} ${
-  months[now.getMonth()]
-} ${now.getFullYear()} ${now.getHours()}:${now.getMinutes()}`;
+    return `${day}  ${hours}:${minutes}`;
+}
 
 //cities' weather info
 function displayWeather(response) {
@@ -40,6 +32,7 @@ function displayWeather(response) {
     let wind = document.querySelector("#wind");
     let state = document.querySelector("#description");
     let icon = document.querySelector("#icon");
+    let dateElement = document.querySelector("#date");
 
     cityElement.innerHTML = response.data.name;
     temp.innerHTML = `${Math.round(celsiusTemp)}`;
@@ -47,6 +40,7 @@ function displayWeather(response) {
     pressure.innerHTML = response.data.main.pressure;
     wind.innerHTML = response.data.wind.speed;
     state.innerHTML = response.data.weather[0].description;
+    dateElement.innerHTML = returnData(response.data.dt * 1000);
     icon.setAttribute(
         "src",
         `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
