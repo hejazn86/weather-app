@@ -15,17 +15,22 @@
 <body>
     <div class="container">
         <div class="weather-app">
-            <div class="weather">
-                <form class="row form" id="form-city">
-                    <div class="col-8">
-                        <input type="text" class="form-control" id="inputCity" placeholder="Enter a city" />
-                    </div>
-                    <div class="col-3">
-                        <button type="submit" class="btn btn-primary mb-2">Search</button>
+            <div class="weather p-3 border bg-light">
+                <form class="mt-3" id="form-city">
+                    <div class="row">
+                        <!-- <div class="col-1"></div> -->
+                        <div class="col-8">
+                            <input type="text" class="form-control" id="inputCity" placeholder="Enter a city ..." autocomplete="off" />
+                        </div>
+                        <div class="col-3">
+                            <button type="submit" class="btn btn-primary container px-10">
+                  Search
+                </button>
+                        </div>
                     </div>
                 </form>
 
-                <div class="row">
+                <div class="row justify-content-evenly">
                     <div class="city-info">
                         <h1 class="city" id="city">Ahwaz</h1>
                         <ul class="date-info">
