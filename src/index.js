@@ -32,8 +32,7 @@ date.innerHTML = `${now.getDate()} ${
 
 //cities' weather info
 function displayWeather(response) {
-    console.log(response);
-    let city = document.querySelector("#city");
+    let cityElement = document.querySelector("#city");
     let temp = document.querySelector("#temp");
     let humidity = document.querySelector("#humidity");
     let pressure = document.querySelector("#pressure");
@@ -41,12 +40,12 @@ function displayWeather(response) {
     let state = document.querySelector("#description");
     let icon = document.querySelector("#icon");
 
-    city.innerHTML = response.data.name;
+    cityElement.innerHTML = response.data.name;
     temp.innerHTML = `${Math.round(response.data.main.temp)}`;
     humidity.innerHTML = `% ${response.data.main.humidity}`;
     pressure.innerHTML = response.data.main.pressure;
     wind.innerHTML = response.data.wind.speed;
-    state.innerHTML = response.data.weather[0].main;
+    state.innerHTML = response.data.weather[0].description;
     icon.setAttribute(
         "src",
         `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -54,17 +53,19 @@ function displayWeather(response) {
     icon.setAttribute("alt", `${response.data.weather[0].description}`);
 }
 
+function search(city) {
+    let apiKey = "23e3d9bae4132013c667d9e2b2889760";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+    axios.get(apiUrl).then(displayWeather);
+}
+
 function getInformation(event) {
     event.preventDefault();
-    let apiKey = "23e3d9bae4132013c667d9e2b2889760";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=`;
-    let cityName = document.querySelector("#inputCity").value;
-    // cityName = cityName.charAt(0).toUpperCase() + cityName.slice(1);
-
-    axios
-        .get(`${apiUrl}${cityName}&units=metric&appid=${apiKey}`)
-        .then(displayWeather);
+    let cityName = document.querySelector("#inputCity");
+    search(cityName.value);
 }
+
+search("Ahvaz");
 
 let formCity = document.querySelector("#form-city");
 formCity.addEventListener("submit", getInformation);
