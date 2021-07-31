@@ -91,3 +91,7 @@ a {
 .units .active:hover {
     text-decoration: none;
 }
+
+.forecast {
+    text-align: center;
+}

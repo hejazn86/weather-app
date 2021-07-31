@@ -1,5 +1,5 @@
 //current date
-function returnData(timestamp) {
+function returnDate(timestamp) {
     let date = new Date(timestamp);
     let days = [
         "Sunday",
@@ -22,8 +22,31 @@ function returnData(timestamp) {
     return `${day}  ${hours}:${minutes}`;
 }
 
-//cities' weather info
+function displayForecast(response) {
+    let date = new Date(response.data.daily[0].dt * 1000);
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Sat"];
+    let day = days[date.getDay()];
+    let forecastElement = document.querySelector("#forecast");
+    forecastElement.innerHTML = `<div class="row">
+                            <div class="col-2">
+                                <div>${day}</div>
+                                <div>
+                                    <img alt="" src="https://openweathermap.org/img/wn/${
+                                      response.data.daily[0].weather[0].icon
+                                    }@2x.png" id="icon" width="60" />
+                                </div>
+                                <div><span>${Math.round(
+                                  response.data.daily[0].temp.max
+                                )}° </span><span> ${Math.round(
+    response.data.daily[0].temp.min
+  )}° </span></div>
+                            </div>
+                        </div>`;
+}
+
 function displayWeather(response) {
+    let lon = response.data.coord.lon;
+    let lat = response.data.coord.lat;
     let cityElement = document.querySelector("#city");
     let temp = document.querySelector("#temp");
     celsiusTemp = response.data.main.temp;
@@ -33,6 +56,8 @@ function displayWeather(response) {
     let state = document.querySelector("#description");
     let icon = document.querySelector("#icon");
     let dateElement = document.querySelector("#date");
+    let apiKey = "23e3d9bae4132013c667d9e2b2889760";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
     cityElement.innerHTML = response.data.name;
     temp.innerHTML = `${Math.round(celsiusTemp)}`;
@@ -40,12 +65,13 @@ function displayWeather(response) {
     pressure.innerHTML = response.data.main.pressure;
     wind.innerHTML = response.data.wind.speed;
     state.innerHTML = response.data.weather[0].description;
-    dateElement.innerHTML = returnData(response.data.dt * 1000);
+    dateElement.innerHTML = returnDate(response.data.dt * 1000);
     icon.setAttribute(
         "src",
         `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
     icon.setAttribute("alt", `${response.data.weather[0].description}`);
+    axios.get(apiUrl).then(displayForecast);
 }
 
 function search(city) {
