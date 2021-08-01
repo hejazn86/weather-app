@@ -1,110 +1,111 @@
 ul {
-  text-decoration: none;
-  list-style: none;
-  margin-top: 3px;
+    text-decoration: none;
+    list-style: none;
+    margin-top: 3px;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .weather-app {
-  padding: 100px 200px 0 200px;
-  /* font-family: "Lobster", cursive; */
-  font-family: "Merienda", cursive;
-  margin: 20px auto;
-  line-height: 0;
+    padding: 100px 200px 0 200px;
+    /* font-family: "Lobster", cursive; */
+    font-family: "Merienda", cursive;
+    margin: 20px auto;
+    line-height: 0;
 }
 
 .weather {
-  border-radius: 20px;
-  max-width: 700px;
-  margin: 40px auto;
-  box-shadow: 0 10px 20px 0 #a8d9f0;
-  line-height: 2;
-  opacity: 90%;
+    border-radius: 20px;
+    max-width: 700px;
+    margin: 40px auto;
+    box-shadow: 0 10px 20px 0 #a8d9f0;
+    line-height: 2;
+    background-color: #bbe4e9;
+    opacity: 90%;
 }
 
 .mt-3 {
-  padding-left: 20px;
+    padding-left: 20px;
 }
 
 .form {
-  margin: 30px auto;
-  padding: 0 50px;
+    margin: 30px auto;
+    padding: 0 50px;
 }
 
 .form-control {
-  padding: 10px 70px 7px 10px;
-  text-transform: capitalize;
+    padding: 10px 70px 7px 10px;
+    text-transform: capitalize;
 }
 
 .btn.btn-success {
-  margin-top: 50px;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 10px 10px;
+    margin-top: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 10px;
 }
 
 .city {
-  margin-bottom: 0;
-  text-align: left;
-  font-size: 50px;
-  display: inline;
-  padding-left: 15px;
+    margin-bottom: 0;
+    text-align: left;
+    font-size: 50px;
+    display: inline;
+    padding-left: 15px;
 }
 
 .city-info {
-  font-size: 16px;
-  text-align: left;
-  margin: 0 auto;
+    font-size: 16px;
+    text-align: left;
+    margin: 0 auto;
 }
 
 .temp {
-  margin: 0 auto;
+    margin: 0 auto;
 }
 
 .days {
-  margin: 0 auto;
+    margin: 0 auto;
 }
 
 .units {
-  display: inline-block;
-  line-height: 24px;
-  vertical-align: top;
-  font-size: 18px;
-  margin-top: 6px;
+    display: inline-block;
+    line-height: 24px;
+    vertical-align: top;
+    font-size: 18px;
+    margin-top: 6px;
 }
 
 .source-code {
-  margin-top: 100px;
-  font-weight: bold;
+    margin-top: 100px;
+    font-weight: bold;
 }
 
 .temperature {
-  font-size: 64px;
-  line-height: 1;
+    font-size: 64px;
+    line-height: 1;
 }
 
 .units .active {
-  cursor: default;
-  color: black;
+    cursor: default;
+    color: black;
 }
 
 .units .active:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .forecast {
-  text-align: center;
-  font-size: 13px;
-  margin-bottom: 10px;
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 10px;
 }
 
 .link-code {
-  font-size: 12px;
+    font-size: 12px;
 }
 
 .forecast-temp-min {
-  opacity: 70%;
+    opacity: 70%;
 }
