@@ -22,26 +22,38 @@ function returnDate(timestamp) {
     return `${day}  ${hours}:${minutes}`;
 }
 
-function displayForecast(response) {
-    let date = new Date(response.data.daily[0].dt * 1000);
+function returnDay(timestamp) {
+    let date = new Date(timestamp * 1000);
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Sat"];
     let day = days[date.getDay()];
+    return day;
+}
+
+function displayForecast(response) {
+    let forecast = response.data.daily;
     let forecastElement = document.querySelector("#forecast");
-    forecastElement.innerHTML = `<div class="row">
-                            <div class="col-2">
-                                <div>${day}</div>
-                                <div>
-                                    <img alt="" src="https://openweathermap.org/img/wn/${
-                                      response.data.daily[0].weather[0].icon
-                                    }@2x.png" id="icon" width="60" />
-                                </div>
-                                <div><span>${Math.round(
-                                  response.data.daily[0].temp.max
-                                )}° </span><span> ${Math.round(
-    response.data.daily[0].temp.min
-  )}° </span></div>
-                            </div>
-                        </div>`;
+    let forecastHtml = `<div class="row">`;
+    forecast.forEach(function(forecastDay, index) {
+        if (index < 6) {
+            forecastHtml =
+                forecastHtml +
+                `<div class="col-2">
+        <div>${returnDay(forecastDay.dt)}</div>
+        <div>
+        <img alt="" src="https://openweathermap.org/img/wn/${
+          forecastDay.weather[0].icon
+        }@2x.png" id="icon" width="60" />
+        </div>
+        <div><span class="forecast-temp-max">${Math.round(
+          forecastDay.temp.max
+        )}°  </span><span class="forecast-temp-min">  ${Math.round(
+          forecastDay.temp.min
+        )}° </span></div> 
+        </div>`;
+        }
+    });
+
+    forecastElement.innerHTML = forecastHtml + "</div>";
 }
 
 function displayWeather(response) {
