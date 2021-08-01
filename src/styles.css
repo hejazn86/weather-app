@@ -109,3 +109,12 @@ a {
 .forecast-temp-min {
     opacity: 70%;
 }
+
+.date-info .text-secondary {
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.date-info .text-secondary:first-letter {
+    text-transform: capitalize;
+}
