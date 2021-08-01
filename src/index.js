@@ -24,7 +24,7 @@ function returnDate(timestamp) {
 
 function returnDay(timestamp) {
     let date = new Date(timestamp * 1000);
-    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Sat"];
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     let day = days[date.getDay()];
     return day;
 }
@@ -34,7 +34,7 @@ function displayForecast(response) {
     let forecastElement = document.querySelector("#forecast");
     let forecastHtml = `<div class="row">`;
     forecast.forEach(function(forecastDay, index) {
-        if (index < 6) {
+        if (index < 7 && index!=0) {
             forecastHtml =
                 forecastHtml +
                 `<div class="col-2">
