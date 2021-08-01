@@ -10,7 +10,6 @@ a {
 }
 
 img {
-    height: auto;
     filter: drop-shadow(3px 3px #80c0ce);
 }
 
