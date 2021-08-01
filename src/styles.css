@@ -2,6 +2,7 @@ ul {
     text-decoration: none;
     list-style: none;
     margin-top: 3px;
+    line-height: 1.5;
 }
 
 a {
@@ -18,7 +19,7 @@ a {
 
 .weather {
     border-radius: 20px;
-    max-width: 700px;
+    max-width: 600px;
     margin: 40px auto;
     box-shadow: 0 10px 20px 0 #a8d9f0;
     line-height: 2;
@@ -111,10 +112,14 @@ a {
 }
 
 .date-info .text-secondary {
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 300;
 }
 
 .date-info .text-secondary:first-letter {
     text-transform: capitalize;
+}
+
+.information {
+    font-size: 14px;
 }
